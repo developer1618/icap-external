@@ -87,7 +87,7 @@
           </ul>
         </nav>
       </div>
-    </div>
+    </div>  
     <div class="sidebar_exit">
       <div>
         <div class="flex cursor-pointer text-lg font-semibold" @click="onLogout"><img :src="logout.icon" alt="icon"

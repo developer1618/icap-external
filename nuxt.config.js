@@ -1,4 +1,4 @@
-let baseUrl = "http://94.241.170.46:7485/";
+let baseUrl = "http://94.241.170.46:7485";
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,

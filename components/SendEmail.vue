@@ -50,7 +50,6 @@
 <script>
 export default {
     layout: "login",
-    middleware: 'auth',
     auth:false,
     data() {
         return {
@@ -66,14 +65,15 @@ export default {
     methods: {
         async login() {
             try {
-                await this.$auth.loginWith("local", {
-                    data: {
-                        email: this.email,
-                        password: this.password,
-                    },
+                await this.$auth.request({
+                  url:this.$auth.strategy.options.endpoints.reset.url,
+                  method:"post",
+                  data:{
+                    email:this.email,
+                  }
                 });
                 this.error = false;
-                this.$router.push("main");
+                this.$router.push("reset-password");
             }
             catch (err) {
                 this.error = true;
