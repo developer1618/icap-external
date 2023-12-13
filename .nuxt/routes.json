@@ -1,0 +1,93 @@
+[
+  {
+    "name": "clients",
+    "path": "/clients",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\clients\\\\index.vue",
+    "chunkName": "pages/clients/index",
+    "_name": "_618de49a"
+  },
+  {
+    "name": "coupons",
+    "path": "/coupons",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\coupons\\\\index.vue",
+    "chunkName": "pages/coupons/index",
+    "_name": "_0d9b1875"
+  },
+  {
+    "name": "directories",
+    "path": "/directories",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\directories\\\\index.vue",
+    "chunkName": "pages/directories/index",
+    "_name": "_69dac212"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\login\\\\index.vue",
+    "chunkName": "pages/login/index",
+    "_name": "_8aa35ace"
+  },
+  {
+    "name": "logs",
+    "path": "/logs",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\logs\\\\index.vue",
+    "chunkName": "pages/logs/index",
+    "_name": "_517c9fba"
+  },
+  {
+    "name": "main",
+    "path": "/main",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\main\\\\index.vue",
+    "chunkName": "pages/main/index",
+    "_name": "_e4ec344e"
+  },
+  {
+    "name": "organization",
+    "path": "/organization",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\organization\\\\index.vue",
+    "chunkName": "pages/organization/index",
+    "_name": "_4350b3c2"
+  },
+  {
+    "name": "reports",
+    "path": "/reports",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\reports\\\\index.vue",
+    "chunkName": "pages/reports/index",
+    "_name": "_33091efa"
+  },
+  {
+    "name": "resetpassword",
+    "path": "/resetpassword",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\resetpassword\\\\index.vue",
+    "chunkName": "pages/resetpassword/index",
+    "_name": "_d764b310"
+  },
+  {
+    "name": "screening",
+    "path": "/screening",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\screening\\\\index.vue",
+    "chunkName": "pages/screening/index",
+    "_name": "_b1b56828"
+  },
+  {
+    "name": "sendemail",
+    "path": "/sendemail",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sendemail\\\\index.vue",
+    "chunkName": "pages/sendemail/index",
+    "_name": "_16afe7e4"
+  },
+  {
+    "name": "settings",
+    "path": "/settings",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\settings\\\\index.vue",
+    "chunkName": "pages/settings/index",
+    "_name": "_3f3ef5a2"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_4cadfab2"
+  }
+]
