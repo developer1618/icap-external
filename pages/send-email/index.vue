@@ -12,9 +12,11 @@
         <div
           class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
         >
-        <div class="second-step w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
-          <SendEmail/>
-        </div>
+          <div
+            class="second-step w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0"
+          >
+            <SendEmail />
+          </div>
         </div>
       </section>
     </div>
@@ -27,48 +29,47 @@ import ResetPassword from '../../components/ResetPassword.vue';
 import SendEmail from '../../components/SendEmail.vue';
 
 export default {
-    layout: "login",
-    middleware: 'auth',
-    auth:false,
-    data() {
-        return {
-            typePassword: true,
-            min: 6,
-            max: 32,
-            type: 1,
-            email: "",
-            password: "",
-            error: false,
-        };
+  layout: 'login',
+  middleware: 'auth',
+  auth: false,
+  data() {
+    return {
+      typePassword: true,
+      min: 6,
+      max: 32,
+      type: 1,
+      email: '',
+      password: '',
+      error: false,
+    };
+  },
+  created() {
+    console.log(this.type);
+  },
+  methods: {
+    async login() {
+      try {
+        await this.$auth.loginWith('local', {
+          data: {
+            email: this.email,
+            password: this.password,
+          },
+        });
+        this.error = false;
+        this.$router.push('admin');
+      } catch (err) {
+        this.error = true;
+      }
     },
-    created() {
-      console.log(this.type);
+  },
+  watch: {
+    email() {
+      this.error = false;
     },
-    methods: {
-        async login() {
-            try {
-                await this.$auth.loginWith("local", {
-                    data: {
-                        email: this.email,
-                        password: this.password,
-                    },
-                });
-                this.error = false;
-                this.$router.push("main");
-            }
-            catch (err) {
-                this.error = true;
-            }
-        },
+    password() {
+      this.error = false;
     },
-    watch: {
-        email() {
-            this.error = false;
-        },
-        password() {
-            this.error = false;
-        },
-    },
-    components: { SendEmail, ResetPassword, Authorization }
+  },
+  components: { SendEmail, ResetPassword, Authorization },
 };
 </script>

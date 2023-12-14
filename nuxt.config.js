@@ -1,49 +1,51 @@
-let baseUrl = "http://94.241.170.46:7485";
+let baseUrl = 'http://94.241.170.46:7485';
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
-  layout: "default",
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "ICAP",
+    title: 'ICAP',
     htmlAttrs: {
-      lang: "en",
+      lang: 'en',
     },
-    meta: [{
-        charset: "utf-8"
+    meta: [
+      {
+        charset: 'utf-8',
       },
       {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1"
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
       },
       {
-        hid: "description",
-        name: "description",
-        content: ""
+        hid: 'description',
+        name: 'description',
+        content: '',
       },
       {
-        name: "format-detection",
-        content: "telephone=no"
+        name: 'format-detection',
+        content: 'telephone=no',
       },
     ],
-    link: [{
-      rel: "icon",
-      type: "image/x-icon",
-      href: "/favicon.ico"
-    }],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/css/main.css"],
+  css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    "~/plugins/axios",
-    "~/plugins/vee-validate",
-    "~/plugins/datepicker",
+    '~/plugins/axios',
+    '~/plugins/vee-validate',
+    '~/plugins/datepicker',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,25 +54,25 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss",
-    "@nuxt/postcss8",
-    "@nuxtjs/moment",
+    '@nuxtjs/tailwindcss',
+    '@nuxt/postcss8',
+    '@nuxtjs/moment',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/auth-next", "@nuxtjs/axios"],
+  modules: ['@nuxtjs/auth-next', '@nuxtjs/axios'],
 
   auth: {
     strategies: {
       local: {
         url: baseUrl,
         token: {
-          property: "access",
+          property: 'access',
           maxAge: false,
           global: true,
         },
         refreshToken: {
-          property: "refresh",
+          property: 'refresh',
         },
         user: {
           property: false,
@@ -80,7 +82,7 @@ export default {
           login: {
             url: `${baseUrl}/accounts/login/`,
           },
-          refresh: { 
+          refresh: {
             url: `${baseUrl}/accounts/token/refresh/`,
           },
           logout: {
@@ -97,14 +99,14 @@ export default {
       },
     },
     redirect: {
-      login: "/login",
-      logout: "/login",
+      login: '/login',
+      logout: '/login',
       callback: '/login',
-      home: "/main",
+      home: '/admin',
     },
   },
   router: {
-    middleware: ["auth"],
+    middleware: ['auth'],
   },
 
   axios: {

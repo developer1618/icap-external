@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <h1>ICAP</h1>
-  </div>
+  <div>dassad</div>
 </template>
 <script>
 export default {
-  middleware: 'admin',
+  layout: 'admin',
 };
 </script>

@@ -1,10 +1,12 @@
 <template>
   <div>
-    <h1>ICAP</h1>
+    <div>
+      <h1>Hello World!</h1>
+    </div>
   </div>
 </template>
 <script>
 export default {
-  middleware: 'admin',
+  layout: 'admin',
 };
 </script>
